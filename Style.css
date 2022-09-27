@@ -1,0 +1,259 @@
+    html{
+        padding: 0;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .Container{
+        position: relative;
+        width: 94%;
+        height: 600px;
+        margin-left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Container .ring{
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top: 4px solid rgb(255, 0, 187);
+        animation: animate 0.7s linear infinite;
+    }
+
+    @keyframes animate
+    {
+        0%
+        {
+            transform: rotate(0deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }
+    .Container .ring::before{
+        content:  '';
+        position: absolute;
+        top: initial;
+        right: 12px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: rgb(243, 5, 144);
+        box-shadow:  0 0 0 5px rgba(141, 39, 98, 0.521),
+        0 0 0 10px rgba(113, 44, 85, 0.388),
+        0 0 0 15px rgb(84, 48, 69),
+        0 0 0 20px rgb(74, 54, 66);
+    }
+    .Container .ring:nth-child(2){
+        animation: animate2 0.7s linear infinite;
+        animation-delay: -1s;
+        border-top: 4px solid transparent;
+        border-left: 4px solid rgb(255, 0, 187);
+    }
+    .Container .ring:nth-child(2)::before{
+        content:  '';
+        position: absolute;
+        top: initial;
+        right: 12px;
+        left: 12px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: rgb(243, 5, 144);
+        box-shadow:  0 0 0 5px rgb(141, 39, 98, 0.521),
+        0 0 0 10px rgb(113, 44, 85, 0.388),
+        0 0 0 15px rgb(84, 48, 69),
+        0 0 0 20px rgb(74, 54, 66);
+    }
+    @keyframes animate2
+    {
+        0%
+        {
+            transform: rotate(0deg);
+        }
+        100%
+        {
+            transform: rotate(360deg);
+        }
+    }
+    .Container .ring:nth-child(3){
+        animation: animate3 0.7s linear infinite;
+        animation-delay: -3s;
+        top: -56.66px;
+        margin-left: -200px;
+        border-top: 4px solid transparent;
+        border-left:  4px solid rgb(243, 239, 241);
+    }
+    @keyframes animate3
+    {
+        0%
+        {
+            transform: rotate(360deg);
+        }
+        100%
+        {
+            transform: rotate(0deg);
+        }
+    }
+    .Container .ring:nth-child(3)::before{
+        content: '';
+        position: absolute;
+        bottom:  12px;
+        left: 12px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: rgb(246, 245, 247);
+        box-shadow:  0 0 0 5px rgb(163, 169, 167),
+        0 0 0 10px rgb(110, 113, 112),
+        0 0 0 15px rgb(89, 91, 90),
+        0 0 0 20px rgb(64, 65, 64);
+    }
+
+    .ArticleContainer{
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0, 255, 255);
+    }
+    .Fondo{
+        background: url('./assets/Liverpool.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .TextContainer{
+        color: rgb(247, 9, 148);
+        font-size: 13vw;
+        font-weight: bold;
+        width: 94%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 2%;
+    }
+    .TextContent{
+        width: 100%;
+        margin-left: 120px;
+    }
+
+
+/*Empieza el Fondo2*/
+    .Fondo2{
+        background: url('./assets/Imagenfon1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .container{
+        position: relative;
+        width: 94%;
+        height: 600px;
+        margin-left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container span {
+        font-size: 120pt;
+        font-weight: bold;
+        position: relative;
+        font-family: "Fredoka One";
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+    .container span::before {
+        content: var(--l);
+        position: absolute;
+        transform: scale(1.1);
+        filter: blur(15px);
+    }
+    .container span::after {
+        content: var(--l);
+        position: absolute;
+        height: 200%;
+        width: 300px;
+        top: 80%;
+        left: 0;
+        filter: blur(30px);
+        transform: rotateX(50deg);
+    }
+    .container span:hover {
+        filter: contrast(250%);
+    }
+    .container span:nth-child(1) {
+        color: #00bef8;
+    }
+    .container span:nth-child(2) {
+        color: #ff0697;
+    }
+    .container span:nth-child(3) {
+        color: #ff4d00;
+    }
+    .container span:nth-child(4) {
+        color: #ffe600;
+    }
+    .container span:nth-child(5) {
+        color: #bb00ff;
+    }
+
+    /*Fondo 3*/
+    .position{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #181818;
+    }
+    .animation2{
+        width: 200px;
+        height: 200px;
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .animation2::before{
+        content: "";
+        background-image: conic-gradient(
+            rgb(6, 240, 6) 10deg,
+            blue 10deg,
+            #ff0000 20deg,
+            transparent 100deg
+        );
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        animation: rotate 1s linear infinite;
+    }
+    .animation2::after{
+        content: "Bienvenido";
+        width: 190px;
+        height: 190px;
+        background: #101010;
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ff0000;
+        font-size: larger;
+        letter-spacing: 5px;
+        box-shadow: inset 20px 20px 20px #0000008c;
+    }
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(-360deg);
+        }
+    }
